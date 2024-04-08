@@ -1,0 +1,1067 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+header {
+    height: 60px;
+    position: fixed;
+    background: transparent;
+    backdrop-filter: saturate(180%) blur(20px);
+    width: 100%;
+    display: block;
+    z-index: 999;
+    text-align: center;
+    display: block;
+
+}
+
+
+#shareYour,
+#titleLove { 
+    /* Comienza con opacidad 0 para que esté oculto */
+    transform: translate(-50%, -50%);
+    /* Mueve el texto hacia abajo */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+header img {
+    height: 100px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+header button {
+    background-color: #FF6A56;
+    color: white;
+    margin-right: 25%;
+    padding: 12px;
+    border: 0px;
+    border-radius: 11px;
+    width: 5%;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+
+}
+
+#shadowVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99vh;
+    background: #00000061;
+}
+
+#videoHero {
+    max-height: 99vh;
+}
+
+#shareYour {
+    top: 20%;
+    position: absolute;
+    font-size: 7.8vw;
+    color: white;
+    text-shadow: -3px 0px 20px #00000069;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#top {
+    display: block;
+    font-size: 105px;
+    height: 99vh;
+}
+
+
+
+#titleLove {
+    font-size: 20vw;
+    position: absolute; 
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%);
+    
+}
+
+
+.hidden {
+    display: none;
+}
+
+#top h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.grayText {
+    color: #6e6e73;
+}
+
+#pauseVideo p {
+    text-align: center;
+    margin-top: 17px;
+    cursor: pointer;
+}
+
+#video-explanation h3 {
+    font-size: 50px;
+    padding-left: 17%;
+    margin-bottom: 36px;
+}
+
+
+
+#pauseVideo p:hover {
+    text-decoration: underline;
+}
+
+.spacePadding {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.secondSpacePadding {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#video-explanation {
+    margin-top: 10%;
+    margin-bottom: 11%;
+}
+
+#video-explanation video {
+    height: 643px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 41px;
+    width: 1390px;
+}
+
+.blackText {
+    color: #1d1d1f;
+}
+
+#titleLove {
+    background-color: #FF5656;
+    background-image: linear-gradient(45deg, #FF5656, #FFBB56);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+#bottom-top {
+    height: 20vh;
+    margin-top: 100px;
+}
+
+#bottom-top h3 {
+    font-size: 76px;
+    text-align: center;
+    width: 65%;
+    line-height: 94px;
+    margin: 0 auto;
+}
+
+
+
+#texts-under-top {
+    text-align: center;
+    font-size: 69px;
+    font-weight: 800;
+    width: 44%;
+    margin: 10% auto;
+}
+
+#texts-under-top p {
+    margin-bottom: 10%;
+}
+
+#firstTextUnderTop {
+    background-color: #CF10BC;
+    background-image: linear-gradient(45deg, #CF10BC, #FF5656);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    line-height: 87px;
+}
+
+
+
+#secondTextUnderTop {
+    line-height: 87px;
+    background-color: #FFBD56;
+    background-image: linear-gradient(45deg, #FFBD56, #FF5656);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+#thirdTextUnderTop {
+    line-height: 87px;
+    background-color: #FF5656;
+    background-image: linear-gradient(45deg, #FF5656, #6E56FF);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+#fourthTextUnderTop {
+    line-height: 87px;
+    background-color: #FF5656;
+    background-image: linear-gradient(45deg, #FF5656, #FFBB56);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+#box-information h3 {
+    font-size: 70px;
+    text-align: center;
+}
+
+#box-information-lamp {
+    height: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
+#disclaimerGranmother {
+    margin-bottom: 10%;
+}
+
+#disclaimerGranmother h3 {
+    background-color: #FF5656;
+    background-image: -webkit-linear-gradient(0deg, #ffa745, #fe869f 30%, #ef7ac8 45%, #a083ed 70%, #43aeff 85%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 70px;
+    text-align: center;
+}
+
+
+#disclaimerGranmother p {
+    text-align: center;
+    font-size: 20px;
+    color: #86868b;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+
+#firstPhone img {
+    height: 400px;
+}
+
+
+#firstPhone,
+#secondPhone,
+#thirdPhone {
+    width: 29%;
+}
+
+
+#box-information h3 {
+    position: absolute;
+    margin: 0 auto;
+    display: block;
+    right: 41%;
+    top: 1%;
+}
+
+
+
+#firstPhone p {
+    top: 0;
+    padding-top: 10px;
+
+    position: relative;
+    color: #86868b;
+    font-weight: 400;
+    width: 48%;
+}
+
+#firstPhone {
+
+    position: absolute;
+    top: 58%;
+
+}
+
+#box-information {
+    position: relative;
+    height: fit-content;
+    display: block;
+}
+
+#secondPhone {
+    position: absolute;
+    right: 27%;
+    top: 85%;
+}
+
+#secondPhone img {
+    height: 400px;
+}
+
+#secondPhone p {
+    top: 0;
+    padding-top: 10px;
+    position: relative;
+    color: #86868b;
+    font-weight: 400;
+    width: 48%;
+}
+
+#thirdPhone {
+    position: absolute;
+    right: 8%;
+    top: 60%;
+}
+
+#thirdPhone img {
+    height: 400px;
+}
+
+#thirdPhone p {
+    top: 0;
+    padding-top: 10px;
+    position: relative;
+    color: #86868b;
+    font-weight: 400;
+    width: 48%;
+}
+
+
+
+
+#real-experience h3 {
+    text-align: center;
+    font-size: 100px;
+    background-color: #FF5656;
+    background-image: linear-gradient(45deg, #FF5656, #6E56FF);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+
+#real-experience #hand {
+    width: 51%;
+    top: 9%;
+    position: absolute;
+    right: -1%;
+}
+
+#real-experience {
+    position: relative;
+    height: 100vh;
+}
+
+#real-experience #lamp {
+    width: 91%;
+    margin: 0 auto;
+    margin-top: -14%;
+    display: block;
+    margin-left: 7%;
+    position: relative;
+    z-index: -10000;
+
+}
+
+#real-experience p {
+    width: 39%;
+    margin: 0 auto;
+    text-align: center;
+    color: #86868b;
+}
+
+
+#howItWorks {
+    width: 100%;
+    height: 59vh;
+}
+
+#howItWorks div {
+    background-color: #fafafa;
+
+}
+
+
+#whenYouPress,
+#touchOver {
+    width: 40%;
+}
+
+
+
+#video-explanation video {
+    height: 100vh;
+    /* Cambiado a ocupar el 100% de la pantalla */
+    width: 100%;
+    /* Cambiado a ocupar el 100% de la pantalla */
+    display: block;
+    margin: 0 auto;
+    border-radius: 41px;
+    object-fit: cover;
+    /* Para cubrir todo el contenedor */
+}
+
+
+
+#email {
+    margin-top: 41%;
+}
+
+
+#containerEmailNewsletter {
+    background: #f9f9f9;
+    border-radius: 85px;
+    height: 47.4vh;
+    width: 48%;
+    margin: 0 auto;
+}
+
+
+
+
+#imageContainerEmail {
+    float: left;
+    width: 49%;
+}
+
+
+#imageContainerEmail #lampEmail {
+    z-index: 9999;
+    position: absolute;
+    left: 18%;
+    top: 595%;
+    height: 68vh;
+}
+
+#imageContainerEmail #backgroundImage {
+    height: 54vh;
+    margin-left: -18%;
+}
+
+#emailPopup #imageContainerEmail #lampEmail {
+    top: -3%;
+    left: 18%;
+    height: 68vh;
+}
+
+#emailPopup #imageContainerEmail #backgroundImage {
+    height: 54.1vh;
+    margin-left: -19%;
+}
+
+#containerInputEmail {
+    z-index: 9999;
+    position: absolute;
+}
+
+#emailPopup #containerTextEmail,
+#email #containerTextEmail {
+    display: block;
+    width: 27%;
+    right: 25%;
+    position: absolute;
+    padding-top: 3%;
+}
+
+#containerTextEmail h3 {
+
+    font-size: 61px;
+    line-height: 60px;
+    padding-top: 32px;
+    text-align: center;
+    padding-right: 79px;
+    margin-bottom: 6%;
+
+}
+
+#containerTextEmail p {
+    padding-left: 5%;
+    padding-right: 10%;
+    margin: 0 auto;
+}
+
+
+#containerInputEmail {
+    margin-top: 18%;
+    margin-left: 11%;
+}
+
+#containerInputEmail input {
+
+    border: 0;
+    padding: 12px;
+    width: 462px;
+    font-size: 17px;
+    border-radius: 12px;
+    height: 33px;
+    padding-left: 22px;
+
+}
+
+#containerInputEmail button {
+    color: black;
+    background: #ffcc02;
+    border: 0;
+    border-radius: 7px;
+    height: 58px;
+    padding: 10px 25px 10px 25px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+
+footer {
+    border-top: 5px solid;
+    border-image: linear-gradient(45deg, #FF5656, #6E56FF) 1;
+    /* aplica un degradado al borde */
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Estilo para preguntas frecuentes similar a la página de Apple */
+#questionAndAnswers .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+
+#questionAndAnswers .container h1 {
+    font-size: 40px;
+}
+
+.accordion {
+    background-color: white;
+    color: #1d1d1f;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.active,
+.accordion:hover {
+    background-color: white;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border-bottom: 1px solid #ddd;
+}
+
+.panel p {
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #333;
+}
+
+/* Iconos para indicar estado abierto/cerrado */
+.accordion::after {
+    content: '\02795';
+    /* Unicode character for a triangle pointing right */
+    font-size: 12px;
+    color: #666;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.active::after {
+    content: '\02796';
+    /* Unicode character for a triangle pointing down */
+    transform: rotate(90deg);
+}
+
+
+#questionAndAnswers {
+
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+
+}
+
+
+#emailPopup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 14%;
+    background: #00000073;
+    z-index: 99999999999;
+    display: none;
+
+}
+
+#closeModal {
+    float: right;
+    margin-right: 65px;
+    margin-top: -43px;
+    font-size: 30px;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+
+.faq {
+    padding-top: 59px;
+}
+
+
+
+
+/* Estilos generales para dispositivos móviles */
+/* Por ejemplo, configurar el ancho máximo para que se ajuste a dispositivos móviles */
+@media only screen and (max-width: 600px) {
+
+    #videoHero {
+        margin-top: 46px;
+        max-height: 400px;
+        width: 100%;
+    }
+
+    #top {
+        width: 100%;
+        height: fit-content;
+    }
+
+
+    #shareYour {
+        font-size: 28px;
+        top: 10%;
+        margin: 0 auto;
+    }
+
+    #titleLove {
+        font-size: 72px;
+        top: 11%;
+        margin: 0 auto;
+    }
+
+    #shadowVideo {
+        max-height: 28.3%;
+    }
+
+    .spacePadding {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #top {
+        height: 27vh;
+    }
+
+    #bottom-top h3 {
+        margin-top: 29px;
+        font-size: 28px;
+        width: 96%;
+        line-height: 41px;
+
+    }
+
+    #bottom-top {
+        height: 13vh;
+        margin-top: 30px;
+    }
+
+    #texts-under-top {
+        margin-top: 0px;
+        width: 80%;
+    }
+
+    #firstTextUnderTop {
+        line-height: 50px;
+    }
+
+    #bottom-top h3 {
+        font-size: 23px;
+        line-height: 26px;
+    }
+
+    #texts-under-top #firstTextUnderTop {
+        font-size: 23px;
+        line-height: 26px;
+    }
+
+    #texts-under-top #secondTextUnderTop {
+        font-size: 23px;
+        line-height: 26px;
+    }
+
+    #texts-under-top #thirdTextUnderTop {
+        font-size: 23px;
+        line-height: 26px;
+    }
+
+    #texts-under-top #fourthTextUnderTop {
+        font-size: 23px;
+        line-height: 26px;
+    }
+
+
+    #containerInputEmail {
+        margin: 0;
+        width: 100%;
+        display: block;
+        position: unset;
+        padding-bottom: 35px;
+    }
+
+    #questionAndAnswers {
+        margin-top: 4%;
+        margin-bottom: 20%;
+    }
+
+    #sendFormInput {
+        margin: 0 auto;
+        display: block;
+        margin-top: 10px;
+        font-size: 15px;
+        padding: 5px 10px 5px 10px;
+        margin-top: 25px;
+        width: 78%;
+
+    }
+
+    #containerInputEmail input {
+        font-size: 12px;
+        width: 73%;
+        position: unset;
+        display: block;
+        margin: 0 auto;
+        height: 23px;
+        margin-top: 34px;
+    }
+
+    #video-explanation #videoExperience {
+        height: 255px !important;
+        width: 100% !important;
+    }
+
+    #easyToControl {
+        font-size: 62px !important;
+        line-height: 67px;
+        margin-bottom: 20px;
+    }
+
+
+    #imageContainerEmail {
+        float: none;
+        width: 100%;
+        position: relative;
+    }
+
+
+    #imageContainerEmail #backgroundImage {
+        height: 43vh;
+        margin-left: 0;
+    }
+
+    #video-explanation h3 {
+        font-size: 31px;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    #disclaimerGranmother h3 {
+        font-size: 41px;
+    }
+
+
+    #disclaimerGranmother {
+        margin-top: 45px;
+    }
+
+    #disclaimerGranmother p {
+        font-size: 12px;
+        width: 69%;
+        margin: 0 auto;
+    }
+
+    #texts-under-top p {
+        margin-bottom: 20%;
+        font-size: 31px;
+        line-height: 36px;
+    }
+
+    #real-experience p {
+        width: 90%;
+    }
+
+    #box-information-lamp {
+        display: none;
+    }
+
+    #firstPhone {
+        display: none;
+    }
+
+    #secondPhone {
+        display: none;
+    }
+
+    #thirdPhone {
+        display: none;
+    }
+
+
+    #real-experience {
+        height: 71vh;
+    }
+
+    #video-explanation {
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+
+    #easyToControl {
+        font-size: 71px !important;
+        line-height: 81px;
+    }
+
+    #faq {
+        padding-bottom: 30px;
+    }
+
+    #questionAndAnswers .container {
+        padding-top: 98px;
+    }
+
+    #email {
+        display: none;
+    }
+
+
+    #box-information h3 {
+        font-size: 23px;
+    }
+
+
+    #firstPhoneMobile {
+        display: block;
+    }
+
+    #secondPhoneMobile {
+        display: block;
+    }
+
+    #thirdPhoneMobile {
+        display: block;
+    }
+
+    #firstPhoneMobile img,
+    #secondPhoneMobile img,
+    #thirdPhoneMobile img {
+        height: 224px;
+        margin-right: 56px;
+    }
+
+    #firstPhoneMobile,
+    #secondPhoneMobile,
+    #thirdPhoneMobile {
+        text-align: center;
+        margin-bottom: 45px;
+        font-size: 14px;
+    }
+
+
+
+
+
+    #emailMobile #backgroundImage {
+        height: 40vh;
+        margin-left: -11px;
+        margin-top: 0px;
+    }
+
+    #emailMobile {
+        margin-top: 104px;
+        height: fit-content;
+    }
+
+
+    #imageContainerEmail #lampEmail {
+        z-index: 9999;
+        position: absolute;
+        left: -13%;
+        height: 44vh;
+        top: -10%;
+    }
+
+    #emailMobile #containerEmailNewsletter {
+        width: 76%;
+        margin: 0 auto;
+        border-radius: 30px;
+        height: fit-content;
+        padding-bottom: 7px;
+    }
+
+    #emailMobile #containerEmailNewsletter #containerTextEmail p {
+        text-align: center;
+        font-size: 12px;
+    }
+
+
+    #emailMobile #containerEmailNewsletter h3 {
+        font-size: 35px;
+        padding: 0;
+        margin: 0 auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        line-height: 29px;
+        text-align: center;
+        margin-bottom: 31px;
+        margin-top: 16px;
+    }
+
+    #emailMobile {
+        display: block;
+        margin-bottom: 24px;
+        overflow: hidden;
+    }
+
+    .desktopOnly {
+        display: none;
+    }
+
+    .mobileOnly {
+        display: block;
+    }
+
+    #real-experience #hand {
+        top: 32%;
+    }
+
+
+
+    #box-information {
+        padding-top: 55px;
+    }
+
+    #box-information h3 {
+        position: unset;
+        display: block;
+        font-size: 38px;
+        padding-bottom: 43px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #real-experience #lamp {
+
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    #real-experience #hand {
+        right: -21%;
+        width: 75%;
+    }
+
+    #real-experience {
+        overflow: hidden !important;
+    }
+
+    header {
+        height: 46px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    header img {
+
+        height: 52px;
+        margin-top: 3px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Estilos generales para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {}
+
+@media only screen and (min-width: 1025px) {
+    #emailMobile {
+        display: none;
+    }
+
+
+    #firstPhoneMobile {
+        display: none;
+    }
+
+    #secondPhoneMobile {
+        display: none;
+    }
+
+    #thirdPhoneMobile {
+        display: none;
+    }
+
+    .desktopOnly {
+        display: block;
+    }
+
+    .mobileOnly {
+        display: none;
+    }
+}
