@@ -23,6 +23,7 @@ header {
     position: fixed;
     background: transparent;
     backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
     width: 100%;
     display: block;
     z-index: 999;
