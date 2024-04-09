@@ -669,6 +669,10 @@ footer {
 
 
 
+#thankyou2, #emailError2{
+    display: none;
+}
+
 
 /* Estilos generales para dispositivos móviles */
 /* Por ejemplo, configurar el ancho máximo para que se ajuste a dispositivos móviles */

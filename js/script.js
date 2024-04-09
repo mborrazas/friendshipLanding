@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const fourthTextUnderTop = document.getElementById("fourthTextUnderTop");
 
 
- 
+
 
     gsap.from(stayInTouchText, {
         opacity: 0,
@@ -146,6 +146,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 window.onload = function () {
+
+
+    // Fecha objetivo (1 de mayo)
+    const targetDate = new Date('2024-05-01T00:00:00');
+    // Elemento HTML donde mostraremos la cuenta regresiva
+    const countdownElements = document.querySelectorAll('.days');
+
+
+
+    // Fecha y hora actual
+    const now = new Date();
+
+    // Diferencia entre la fecha objetivo y la fecha actual en milisegundos
+    const difference = targetDate - now;
+
+    // Calculamos días restantes
+    const days = Math.ceil(difference / (1000 * 60 * 60 * 24));
+
+    // Mostramos la cuenta regresiva en el elemento HTML
+    countdownElements.forEach(element => {
+        element.innerHTML = `${days}`;
+    });
+
+
+
     var pause = document.getElementById('pause');
     var play = document.getElementById("play");
     let vid = document.getElementById("videoExperience");
@@ -189,9 +214,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     botonEnviar.addEventListener("click", function () {
         const direccionCorreo = document.getElementById("emailInput").value;
-
-
-
         sendEmail(direccionCorreo);
     });
 
@@ -208,6 +230,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         sendEmail(direccionCorreo);
     });
+
+    sendFormInput2.addEventListener("click", function () {
+        const direccionCorreo = document.getElementById("emailInput2").value;
+        if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
+            document.getElementById("emailError2").style.display ="block";
+            return;
+        }
+        document.getElementById("emailError2").style.display ="none";
+        sendEmail(direccionCorreo, "thankyou2");
+    });
+
 
 
     var modal = document.getElementById("emailPopup");
@@ -228,44 +261,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
- 
 
-function sendEmail(email) {
+let emailbackoup = "";
+function sendEmail(email, idThankyou) {
 
+    emailbackoup = email;
+    if (email != emailbackoup) {
+        const apiUrl = 'http://137.184.184.56:3001/emails/create';
 
-    const apiUrl = 'https://ejemplo.com/api/send-email';
+        // Opciones de la solicitud
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email })
+        };
 
-    // Opciones de la solicitud
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email: email })
-    };
-
-    fetch(apiUrl, requestOptions)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('No se pudo enviar el correo electrónico');
-            }
-            var modal = document.getElementById("emailPopup");
-            modal.style.display = "none";
-            return response.json();
-        })
-        .then(data => {
-            console.log('Correo electrónico enviado correctamente:', data);
-            var modal = document.getElementById("emailPopup");
-            modal.style.display = "none";
-        })
-        .catch(error => {
-            var modal = document.getElementById("emailPopup");
-            modal.style.display = "none";
-            console.error('Error al enviar el correo electrónico:', error);
-        });
-
-
+        fetch(apiUrl, requestOptions)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('No se pudo enviar el correo electrónico');
+                }
+                var modal = document.getElementById("emailPopup");
+                modal.style.display = "none";
+                return response.json();
+            })
+            .then(data => {
+                console.log('Correo electrónico enviado correctamente:', data);
+                var modal = document.getElementById("emailPopup");
+                modal.style.display = "none";
+            })
+            .catch(error => {
+                var modal = document.getElementById("emailPopup");
+                modal.style.display = "none";
+                console.error('Error al enviar el correo electrónico:', error);
+            });
+    }
+    
+    document.getElementById(idThankyou).style.display = "block";
 }
 
 
-  
