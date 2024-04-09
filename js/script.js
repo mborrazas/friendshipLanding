@@ -268,8 +268,7 @@ function sendEmail(email, idThankyou) {
 
     if (email != emailbackoup) {
         emailbackoup = email;
-        console.log("entro");
-        const apiUrl = 'http://137.184.184.56:3001/emails/create';
+         const apiUrl = 'http://137.184.184.56:3001/emails/create';
 
         // Opciones de la solicitud
         const requestOptions = {
@@ -282,8 +281,7 @@ function sendEmail(email, idThankyou) {
 
         fetch(apiUrl, requestOptions)
             .then(response => {
-                console.log(response);
-                if (!response.ok) {
+                 if (!response.ok) {
                     throw new Error('No se pudo enviar el correo electrónico');
                 }
                 var modal = document.getElementById("emailPopup");
