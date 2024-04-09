@@ -265,8 +265,10 @@ document.addEventListener("DOMContentLoaded", function () {
 let emailbackoup = "";
 function sendEmail(email, idThankyou) {
 
-    emailbackoup = email;
+
     if (email != emailbackoup) {
+        emailbackoup = email;
+        console.log("entro");
         const apiUrl = 'http://137.184.184.56:3001/emails/create';
 
         // Opciones de la solicitud
@@ -280,6 +282,7 @@ function sendEmail(email, idThankyou) {
 
         fetch(apiUrl, requestOptions)
             .then(response => {
+                console.log(response);
                 if (!response.ok) {
                     throw new Error('No se pudo enviar el correo electrónico');
                 }
