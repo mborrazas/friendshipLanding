@@ -611,6 +611,7 @@ footer {
     margin-top: 0;
     margin-bottom: 18px;
     color: #333;
+    text-align: left;
 }
 
 /* Iconos para indicar estado abierto/cerrado */
