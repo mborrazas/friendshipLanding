@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
     if (!localStorage.getItem('popup_mostrado')) {
-        setTimeout(abrirPopup, 2000);
+        setTimeout(abrirPopup, 4000);
     }
 
 
