@@ -33,7 +33,7 @@ header {
 
 
 #shareYour,
-#titleLove { 
+#titleLove {
     /* Comienza con opacidad 0 para que esté oculto */
     transform: translate(-50%, -50%);
     /* Mueve el texto hacia abajo */
@@ -95,11 +95,13 @@ header button {
 
 #titleLove {
     font-size: 20vw;
-    position: absolute; 
-    top: 50%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
+    position: absolute;
+    top: 50%;
+    /* Centrar verticalmente */
+    left: 50%;
+    /* Centrar horizontalmente */
     transform: translate(-50%, -50%);
-    
+
 }
 
 
@@ -674,30 +676,33 @@ footer {
 
     #videoHero {
         margin-top: 46px;
-        max-height: 400px;
+        max-height: 46vw;
         width: 100%;
     }
 
     #top {
         width: 100%;
         height: fit-content;
+        top: 21%;
     }
 
 
     #shareYour {
         font-size: 28px;
-        top: 10%;
+        top: 28vw;
         margin: 0 auto;
     }
 
     #titleLove {
         font-size: 72px;
-        top: 11%;
+        top: 38vw;
         margin: 0 auto;
     }
 
     #shadowVideo {
-        max-height: 28.3%;
+        max-height: 46vw;
+        width: 100%;
+        margin-top: 46px;
     }
 
     .spacePadding {
@@ -705,9 +710,7 @@ footer {
         padding-right: 10%;
     }
 
-    #top {
-        height: 27vh;
-    }
+
 
     #bottom-top h3 {
         margin-top: 29px;
