@@ -214,50 +214,103 @@ document.addEventListener("DOMContentLoaded", function () {
 
     botonEnviar.addEventListener("click", function () {
         const direccionCorreo = document.getElementById("emailInput").value;
+
+        if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
+            document.getElementById("emailError4").style.display = "block";
+            return;
+        }
+
+        var modalMobile = document.getElementById("emailPopup");
+        modalMobile.style.display = "none";
+
+
         sendEmail(direccionCorreo);
     });
+
+
+
+
 
     const sendFormInput = document.getElementById("sendFormInput");
 
 
     sendFormInput.addEventListener("click", function () {
-        const direccionCorreo = document.getElementById("emailInputPopup").value;
+        const direccionCorreo = document.getElementById("emailPopup2").value;
 
         if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
-            console.error('Por favor, ingrese una dirección de correo electrónico válida.');
+            document.getElementById("emailError3").style.display = "block";
             return;
         }
+
+        var modalMobile = document.getElementById("containerEmailMobilePopup");
+        modalMobile.style.display = "none";
+
 
         sendEmail(direccionCorreo);
     });
 
+
+    const sendFormInput2 = document.getElementById("sendFormInput2");
+
+
+
     sendFormInput2.addEventListener("click", function () {
         const direccionCorreo = document.getElementById("emailInput2").value;
         if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
-            document.getElementById("emailError2").style.display ="block";
+            document.getElementById("emailError2").style.display = "block";
             return;
         }
-        document.getElementById("emailError2").style.display ="none";
+        document.getElementById("emailError2").style.display = "none";
         sendEmail(direccionCorreo, "thankyou2");
     });
 
 
 
-    var modal = document.getElementById("emailPopup");
+    const sendFormInput4 = document.getElementById("sendFormInput4");
 
-    /**openModalBtn.onclick = function() {
+
+
+    sendFormInput4.addEventListener("click", function () {
+        const direccionCorreo = document.getElementById("emailInput6").value;
+        if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
+            document.getElementById("emailError5").style.display = "block";
+            return;
+        }
+        document.getElementById("emailError5").style.display = "none";
+        sendEmail(direccionCorreo, "thankyou3");
+    });
+
+
+
+
+
+    function abrirPopup() {
+        var modal = document.getElementById("emailPopup");
+        var modalMobile = document.getElementById("containerEmailMobilePopup");
         modal.style.display = "block";
-      }
-**/
+        modalMobile.style.display = "block";
+
+    }
+    if (!localStorage.getItem('popup_mostrado')) {
+        setTimeout(abrirPopup, 2000);
+    }
+
+
+
+    var closeModalMobile = document.getElementById("closeModalMobile");
+    closeModalMobile.addEventListener("click", function () {
+        var modalMobile = document.getElementById("containerEmailMobilePopup");
+        modalMobile.style.display = "none";
+    })
+
 
 
     var closeModalBtn = document.getElementById("closeModal");
 
-    closeModalBtn.onclick = function () {
+    closeModalBtn.addEventListener("click", function () {
+        var modal = document.getElementById("emailPopup");
         modal.style.display = "none";
-    }
-
-
+    })
 
 
 });
@@ -267,8 +320,10 @@ function sendEmail(email, idThankyou) {
 
 
     if (email != emailbackoup) {
-        emailbackoup = email;
-         const apiUrl = 'http://137.184.184.56:3001/emails/create';
+        emailbackoup = email;  
+        localStorage.setItem('popup_mostrado', 'true');
+
+        const apiUrl = 'http://137.184.184.56:3001/emails/create';
 
         // Opciones de la solicitud
         const requestOptions = {
@@ -281,7 +336,7 @@ function sendEmail(email, idThankyou) {
 
         fetch(apiUrl, requestOptions)
             .then(response => {
-                 if (!response.ok) {
+                if (!response.ok) {
                     throw new Error('No se pudo enviar el correo electrónico');
                 }
                 var modal = document.getElementById("emailPopup");
@@ -299,8 +354,11 @@ function sendEmail(email, idThankyou) {
                 console.error('Error al enviar el correo electrónico:', error);
             });
     }
-    
-    document.getElementById(idThankyou).style.display = "block";
+    if (idThankyou) {
+        document.getElementById(idThankyou).style.display = "block";
+    }
+
+
 }
 
 

@@ -672,10 +672,24 @@ footer {
 
 
 
-#thankyou2, #emailError2{
+#thankyou2,
+#emailError2,
+#emailError3,
+#emailError4,
+#emailError5,
+#thankyou3 {
     display: none;
 }
 
+#containerEmailMobilePopup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000073;
+    z-index: 99999999999;
+
+}
 
 /* Estilos generales para dispositivos móviles */
 /* Por ejemplo, configurar el ancho máximo para que se ajuste a dispositivos móviles */
@@ -780,7 +794,8 @@ footer {
         margin-bottom: 20%;
     }
 
-    #sendFormInput {
+    #sendFormInput,
+    #sendFormInput4 {
         margin: 0 auto;
         display: block;
         margin-top: 10px;
@@ -937,13 +952,15 @@ footer {
 
 
 
-    #emailMobile #backgroundImage {
+    #emailMobile #backgroundImage,
+    #emailMobilePopup #backgroundImage {
         height: 40vh;
         margin-left: -11px;
         margin-top: 0px;
     }
 
-    #emailMobile {
+    #emailMobile,
+    #emailMobilePopup {
         margin-top: 104px;
         height: fit-content;
     }
@@ -957,7 +974,8 @@ footer {
         top: -10%;
     }
 
-    #emailMobile #containerEmailNewsletter {
+    #emailMobile #containerEmailNewsletter,
+    #emailMobilePopup #containerEmailNewsletter {
         width: 76%;
         margin: 0 auto;
         border-radius: 30px;
@@ -965,13 +983,15 @@ footer {
         padding-bottom: 7px;
     }
 
-    #emailMobile #containerEmailNewsletter #containerTextEmail p {
+    #emailMobile #containerEmailNewsletter #containerTextEmail p,
+    #emailMobilePopup #containerEmailNewsletter #containerTextEmail p {
         text-align: center;
         font-size: 12px;
     }
 
 
-    #emailMobile #containerEmailNewsletter h3 {
+    #emailMobile #containerEmailNewsletter h3,
+    #emailMobilePopup #containerEmailNewsletter h3 {
         font-size: 35px;
         padding: 0;
         margin: 0 auto;
@@ -983,7 +1003,8 @@ footer {
         margin-top: 16px;
     }
 
-    #emailMobile {
+    #emailMobile,
+    #emailMobilePopup {
         display: block;
         margin-bottom: 24px;
         overflow: hidden;
@@ -1044,6 +1065,24 @@ footer {
         display: block;
         margin: 0 auto;
     }
+
+    #emailPopup {
+        display: none !important;
+    }
+
+    #containerEmailMobilePopup {
+        display: none;
+    }
+
+    #closeModalMobile {
+        background: transparent;
+        border: 0;
+        font-size: 29px;
+        position: absolute;
+        top: 10%;
+        right: 15%;
+        z-index: 99999999;
+    }
 }
 
 /* Estilos generales para tabletas */
@@ -1054,6 +1093,9 @@ footer {
         display: none;
     }
 
+    #containerEmailMobilePopup {
+        display: none !important;
+    }
 
     #firstPhoneMobile {
         display: none;
@@ -1074,4 +1116,33 @@ footer {
     .mobileOnly {
         display: none;
     }
+}
+
+
+#emailMobilePopup {
+    margin-top: 60px;
+
+    padding-top: 10px;
+}
+
+
+#emailMobilePopup #backgroundImage {
+    height: 42vh;
+    margin-left: -20px;
+    margin-top: -5px;
+}
+
+#emailMobilePopup #containerEmailNewsletter {
+    width: 81%;
+}
+
+
+#emailError3,
+#emailError5 {
+    text-align: center;
+}
+
+#thankyou3 { 
+    text-align: center;
+    margin-top: 10px;
 }
