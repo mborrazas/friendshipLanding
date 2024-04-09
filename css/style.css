@@ -591,6 +591,7 @@ footer {
     border: none;
     outline: none;
     font-size: 16px;
+    font-weight: 600;
 }
 
 .active,
