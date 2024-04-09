@@ -149,7 +149,9 @@ window.onload = function () {
     var pause = document.getElementById('pause');
     var play = document.getElementById("play");
     let vid = document.getElementById("videoExperience");
-
+    vid.play();
+    let videoHero = document.getElementById("videoHero");
+    videoHero.play();
     pause.onclick = function () {
         vid.pause();
         pause.classList.add("hidden")
