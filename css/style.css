@@ -1142,7 +1142,158 @@ footer {
     text-align: center;
 }
 
-#thankyou3 { 
+#thankyou3 {
     text-align: center;
     margin-top: 10px;
+}
+
+
+
+@media(min-width: 450px) and (max-width: 650px) {
+    #emailPopup {
+        display: none !important;
+    }
+}
+
+@media(min-width: 640px) and (max-width: 1024px) {
+    #shareYour {
+        font-size: 5rem;
+        width: 100%;
+    }
+
+    #titleLove {
+        font-size: 13rem;
+        position: absolute;
+        top: 36%;
+    }
+
+    #containerEmailMobilePopup #containerEmailNewsletter {
+        height: 79.4vh;
+        width: 54%;
+    }
+
+    #emailMobilePopup #backgroundImage {
+        height: 52vh;
+    }
+
+    #imageContainerEmail {
+        width: 100%;
+    }
+
+    .spacePadding {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+
+    #bottom-top h3 {
+        width: 100%;
+        font-size: 3rem;
+    }
+
+    #texts-under-top {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 800;
+        width: 93%;
+        line-height: 94px;
+        margin: 10% auto;
+    }
+
+
+    #video-explanation h3 {
+        padding-left: 4%;
+    }
+
+
+    #videoHero {
+        max-height: 71vh;
+    }
+
+    #shadowVideo {
+        max-height: 71vh;
+    }
+
+    #top {
+        height: 66vh;
+    }
+
+    #real-experience h3 {
+        font-size: 4rem;
+    }
+
+    #real-experience p {
+        width: 76%;
+    }
+
+    #real-experience #hand {
+        width: 58%;
+        top: 17%;
+    }
+
+    .mobileOnly {
+        display: none;
+    }
+
+    #real-experience {
+        height: fit-content;
+        padding-bottom: 4rem;
+    
+    }
+
+    #disclaimerGranmother p {
+        font-size: 1rem;
+    }
+
+    #video-explanation video{
+        max-width: 700px;
+    }
+}
+
+
+@media(min-width: 768px) {}
+
+
+@media(min-width: 1024px) and (max-width: 1280px) {
+    #shareYour {
+        font-size: 8rem;
+        width: 100%;
+    }
+
+    #titleLove {
+        font-size: 19rem;
+        position: absolute;
+        top: 42%;
+    }
+
+
+    #bottom-top h3 {
+        width: 70%;
+        font-size: 3rem;
+    }
+
+    #texts-under-top{
+        width: 65%;
+    }
+}
+
+@media(min-width: 1280px) {
+    #shareYour {
+        font-size: 8rem;
+        width: 100%;
+    }
+
+    #titleLove {
+        font-size: 19rem;
+        position: absolute;
+        top: 40%;
+    }
+ 
+}
+
+
+
+
+#containerEmailMobilePopup {
+    display: none !important;
 }
