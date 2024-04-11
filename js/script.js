@@ -323,7 +323,7 @@ function sendEmail(email, idThankyou) {
         emailbackoup = email;  
         localStorage.setItem('popup_mostrado', 'true');
 
-        const apiUrl = 'http://137.184.184.56:3001/emails/create';
+        const apiUrl = 'https://www.huuglight.com/emails/create';
 
         // Opciones de la solicitud
         const requestOptions = {
