@@ -412,7 +412,7 @@ header button {
 }
 
 #real-experience p {
-    width: 39%;
+    width: 77%;
     margin: 0 auto;
     text-align: center;
     color: #86868b;
@@ -1238,14 +1238,14 @@ footer {
     #real-experience {
         height: fit-content;
         padding-bottom: 4rem;
-    
+
     }
 
     #disclaimerGranmother p {
         font-size: 1rem;
     }
 
-    #video-explanation video{
+    #video-explanation video {
         max-width: 700px;
     }
 }
@@ -1272,7 +1272,7 @@ footer {
         font-size: 3rem;
     }
 
-    #texts-under-top{
+    #texts-under-top {
         width: 65%;
     }
 }
@@ -1286,9 +1286,20 @@ footer {
     #titleLove {
         font-size: 19rem;
         position: absolute;
-        top: 40%;
+        top: 27rem;
     }
- 
+
+    #video-explanation video {
+        max-width: 100%;
+    }
+
+    #easyToControl {
+        font-size: 5rem !important;
+    }
+
+    #real-experience{
+        padding-bottom: 52px;
+    }
 }
 
 
@@ -1296,4 +1307,12 @@ footer {
 
 #containerEmailMobilePopup {
     display: none !important;
+}
+
+#bottom-top {
+    height: fit-content;
+}
+
+#real-experience {
+    height: fit-content;
 }
