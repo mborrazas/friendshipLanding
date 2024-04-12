@@ -312,6 +312,12 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
     })
 
+    window.addEventListener('click', function (e) {
+        if (!document.getElementById('containerEmailNewsletter').contains(e.target)) {
+
+        }
+    });
+
 
 });
 

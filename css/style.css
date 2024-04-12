@@ -1463,7 +1463,7 @@ footer {
     }
 
     #emailPopup #imageContainerEmail #backgroundImage {
-        margin-left: -22%;
+        margin-left: -35%;
     }
 
     #emailPopup #imageContainerEmail #lampEmail {
@@ -1473,7 +1473,7 @@ footer {
     }
 
     #containerInputEmail {
-        margin-top: calc(100vh - 850px);
+        margin-top: 20%;
     }
 
     #emailPopup #containerTextEmail,
@@ -1481,11 +1481,18 @@ footer {
         width: 39%;
         right: 13%;
         position: absolute;
-        margin-top: calc(100vh - 1171px) !important;
+        margin-top: 4%;
     }
 
     #email #containerInputEmail{
         margin-top: calc(100vh - 952px);
+    }
+    #closeModal{
+        margin-right: 41%;
+    }
+
+    #email #containerInputEmail{
+        margin-top: 14%;
     }
 }
 
