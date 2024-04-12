@@ -1362,6 +1362,10 @@ footer {
         width: 100%;
     }
 
+    #containerEmailMobilePopup{
+        display: none !important;
+    }
+
 
     #containerEmailNewsletter {
         max-width: 724px;
@@ -1479,9 +1483,7 @@ footer {
 
 
 
-#containerEmailMobilePopup {
-    display: none !important;
-}
+ 
 
 #bottom-top {
     height: fit-content;
