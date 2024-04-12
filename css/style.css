@@ -1406,7 +1406,7 @@ footer {
 
     #emailPopup #containerTextEmail,
     #email #containerTextEmail {
-        padding-top: calc(100vh - 1047px);
+        padding-top: calc(100vh - 1146px);
     }
 
     #titleLove {
@@ -1481,8 +1481,11 @@ footer {
         width: 39%;
         right: 13%;
         position: absolute;
+        margin-top: calc(100vh - 1171px) !important;
+    }
 
-        padding-top: calc(100vh - 1047px);
+    #email #containerInputEmail{
+        margin-top: calc(100vh - 952px);
     }
 }
 
