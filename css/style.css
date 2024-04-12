@@ -744,6 +744,7 @@ footer {
     #bottom-top {
         height: 13vh;
         margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     #texts-under-top {
@@ -954,7 +955,7 @@ footer {
 
     #emailMobile #backgroundImage,
     #emailMobilePopup #backgroundImage {
-        height: 46.3vh !important;
+        height: 40.3vh !important;
         margin-left: -11px;
         margin-top: 0px;
     }
@@ -1176,7 +1177,10 @@ footer {
         width: 100%;
     }
 
-    #emailMobile{display: none;}
+    #emailMobile {
+        display: none;
+    }
+
     #titleLove {
         font-size: 13rem;
         position: absolute;
@@ -1361,7 +1365,7 @@ footer {
         width: 100%;
     }
 
-    #containerEmailMobilePopup{
+    #containerEmailMobilePopup {
         display: none !important;
     }
 
@@ -1474,15 +1478,15 @@ footer {
         width: 39%;
         right: 13%;
         position: absolute;
-        
+
         padding-top: calc(100vh - 1047px);
-    } 
+    }
 }
 
 
 
 
- 
+
 
 #bottom-top {
     height: fit-content;
