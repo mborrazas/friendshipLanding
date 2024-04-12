@@ -329,7 +329,6 @@ header button {
 #box-information {
     position: relative;
     height: fit-content;
-    height: 108vh;
     display: block;
     margin-bottom: 58vh;
 }
