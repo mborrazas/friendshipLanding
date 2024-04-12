@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    const sendFormInput2 = document.getElementById("sendFormInput2");
+    const sendFormInput2 = document.getElementById("emailInput4");
 
 
 
@@ -320,7 +320,7 @@ function sendEmail(email, idThankyou) {
 
 
     if (email != emailbackoup) {
-        emailbackoup = email;  
+        emailbackoup = email;
         localStorage.setItem('popup_mostrado', 'true');
 
         const apiUrl = 'https://www.huuglight.com/emails/create';

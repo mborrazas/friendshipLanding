@@ -301,11 +301,10 @@ header button {
 
 
 #box-information h3 {
-    position: absolute;
     margin: 0 auto;
     display: block;
-    right: 41%;
-    top: 1%;
+    text-align: center;
+    width: 100%;
 }
 
 
@@ -330,7 +329,9 @@ header button {
 #box-information {
     position: relative;
     height: fit-content;
+    height: 108vh;
     display: block;
+    margin-bottom: 58vh;
 }
 
 #secondPhone {
@@ -1026,6 +1027,7 @@ footer {
 
     #box-information {
         padding-top: 55px;
+        margin-bottom: 30vh;
     }
 
     #box-information h3 {
@@ -1086,9 +1088,23 @@ footer {
 }
 
 /* Estilos generales para tabletas */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+    #firstPhoneMobile,
+    #secondPhoneMobile,
+    #thirdPhoneMobile {
+        display: none;
+    }
+}
 
 @media only screen and (min-width: 1025px) {
+
+    #firstPhoneMobile,
+    #secondPhoneMobile,
+    #thirdPhoneMobile {
+        display: none;
+    }
+
     #emailMobile {
         display: none;
     }
@@ -1161,6 +1177,7 @@ footer {
         width: 100%;
     }
 
+    #emailMobile{display: none;}
     #titleLove {
         font-size: 13rem;
         position: absolute;
@@ -1171,6 +1188,30 @@ footer {
         height: 79.4vh;
         width: 54%;
     }
+
+    #emailPopup #containerEmailNewsletter {
+        width: 86%;
+        height: 47.4vh !important;
+    }
+
+    #emailPopup #imageContainerEmail #lampEmail {
+        top: -57%;
+        left: -26%;
+        height: 66vh;
+    }
+
+    #emailPopup #containerTextEmail,
+    #email #containerTextEmail {
+        width: 46% !important;
+        right: 11% !important;
+        position: absolute !important;
+        padding-top: 8% !important;
+    }
+
+    #emailPopup #containerInputEmail {
+        margin-top: 32%;
+    }
+
 
     #emailMobilePopup #backgroundImage {
         height: 52vh;
@@ -1248,16 +1289,86 @@ footer {
     #video-explanation video {
         max-width: 700px;
     }
+
+    #thirdPhone {
+        position: absolute;
+        right: 0%;
+        top: 60%;
+    }
+
+    #secondPhone {
+        right: 31%;
+    }
 }
 
 
-@media(min-width: 768px) {}
+@media(min-width: 768px) {
+    #thirdPhone {
+        right: -4%;
+    }
+
+    #imageContainerEmail {
+        position: relative;
+    }
+
+    #imageContainerEmail #backgroundImage {
+        height: 37vh;
+        margin-left: -10%;
+    }
+
+    #imageContainerEmail #lampEmail {
+        top: -46%;
+        height: 41vh;
+        left: -14%;
+    }
+
+    #containerEmailNewsletter {
+        width: 81%;
+        height: 32.4vh;
+    }
+
+    #emailPopup #containerTextEmail,
+    #email #containerTextEmail {
+        width: 51%;
+        right: 9%;
+        position: absolute;
+        padding-top: 3%;
+    }
+
+    #containerTextEmail h3 {
+        font-size: 2.8rem;
+        padding-top: 0;
+        text-align: left;
+        margin-left: 6%;
+        margin-bottom: 0%;
+        line-height: 50px;
+    }
+
+    #containerInputEmail {
+        width: 65%;
+        margin-top: 29%;
+
+    }
+
+    #containerInputEmail input {
+        width: 50%;
+    }
+}
 
 
 @media(min-width: 1024px) and (max-width: 1280px) {
     #shareYour {
         font-size: 8rem;
         width: 100%;
+    }
+
+
+    #containerEmailNewsletter {
+        max-width: 724px;
+    }
+
+    #containerInputEmail {
+        margin-top: 18%;
     }
 
     #titleLove {
@@ -1283,6 +1394,11 @@ footer {
         width: 100%;
     }
 
+    #emailPopup #containerTextEmail,
+    #email #containerTextEmail {
+        padding-top: calc(100vh - 1047px);
+    }
+
     #titleLove {
         font-size: 19rem;
         position: absolute;
@@ -1297,9 +1413,67 @@ footer {
         font-size: 5rem !important;
     }
 
-    #real-experience{
+    #real-experience {
         padding-bottom: 52px;
     }
+
+    #containerEmailNewsletter {
+        max-width: 832px;
+    }
+
+    #containerInputEmail input {
+        max-width: 400px;
+    }
+
+    #containerInputEmail {
+        margin-top: 13%;
+    }
+
+    #thirdPhone {
+        right: -2%;
+    }
+
+    #firstPhone {
+        left: 18%;
+    }
+
+    #containerTextEmail p {
+        max-width: 400px;
+        margin: unset;
+    }
+
+    #emailPopup #containerTextEmail,
+    #email #containerTextEmail {
+        width: 43%;
+    }
+
+
+    #emailPopup #containerEmailNewsletter {
+        height: 47.4vh;
+    }
+
+    #emailPopup #imageContainerEmail #backgroundImage {
+        margin-left: -22%;
+    }
+
+    #emailPopup #imageContainerEmail #lampEmail {
+        top: -55%;
+        left: -42%;
+        height: 68vh;
+    }
+
+    #containerInputEmail {
+        margin-top: calc(100vh - 850px);
+    }
+
+    #emailPopup #containerTextEmail,
+    #email #containerTextEmail {
+        width: 39%;
+        right: 13%;
+        position: absolute;
+        
+        padding-top: calc(100vh - 1047px);
+    } 
 }
 
 
