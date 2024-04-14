@@ -226,6 +226,20 @@ document.addEventListener("DOMContentLoaded", function () {
         event.stopPropagation(); // Detiene la propagación del clic al contenedor del popup
     });
     
+
+
+    // Cerrar el popup cuando se haga clic en el botón de cerrar
+    document.getElementById("miPopup").addEventListener("click", function() {
+        document.getElementById("popupNewsletterEmail").style.display = "none";
+    });
+
+ 
+
+    // Evitar que el clic en el contenido del popup cierre el popup
+    document.getElementsByClassName("popup-contenido").addEventListener("click", function(event) {
+        event.stopPropagation(); // Detiene la propagación del clic al contenedor del popup
+    });
+    
     
 
     document.getElementById("sendMobilePopupInput").addEventListener("click", function () {
