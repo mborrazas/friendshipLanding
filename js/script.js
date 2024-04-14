@@ -210,83 +210,68 @@ for (i = 0; i < acc.length; i++) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const botonEnviar = document.getElementById("sendForm");
+   
 
-    botonEnviar.addEventListener("click", function () {
-        const direccionCorreo = document.getElementById("emailInput").value;
 
+ 
+    
+
+    document.getElementById("sendMobilePopupInput").addEventListener("click", function () {
+        const direccionCorreo = document.getElementById("mobilePopupInput").value;
         if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
-            document.getElementById("emailError4").style.display = "block";
+            document.getElementById("errorEmailPopupMobile").style.display = "block";
             return;
         }
-
-        var modalMobile = document.getElementById("emailPopup");
-        modalMobile.style.display = "none";
-
-
+        document.getElementById("errorEmailPopupMobile").style.display = "none";
         sendEmail(direccionCorreo);
+        document.getElementById("popupNewsletterEmail").style.display = "none"; 
     });
 
 
 
-
-
-    const sendFormInput = document.getElementById("sendFormInput");
-
-
-    sendFormInput.addEventListener("click", function () {
-        const direccionCorreo = document.getElementById("emailPopup2").value;
-
+    document.getElementById("sendDesktopPopupInput").addEventListener("click", function () {
+        const direccionCorreo = document.getElementById("desktopPopupInput").value;
         if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
-            document.getElementById("emailError3").style.display = "block";
+            document.getElementById("errorEmailPopupMobile").style.display = "block";
             return;
         }
-
-        var modalMobile = document.getElementById("containerEmailMobilePopup");
-        modalMobile.style.display = "none";
-
-
+        document.getElementById("errorEmailDesktopMobile").style.display = "none";
         sendEmail(direccionCorreo);
+        document.getElementById("miPopup").style.display = "none"; 
     });
 
 
-    const sendFormInput2 = document.getElementById("emailInput4");
-
-
-
-    sendFormInput2.addEventListener("click", function () {
-        const direccionCorreo = document.getElementById("emailInput2").value;
+    document.getElementById("sendMobileInput").addEventListener("click", function () {
+        const direccionCorreo = document.getElementById("mobileInput").value;
         if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
-            document.getElementById("emailError2").style.display = "block";
+            document.getElementById("errorEmailMobile").style.display = "block";
             return;
         }
-        document.getElementById("emailError2").style.display = "none";
-        sendEmail(direccionCorreo, "thankyou2");
+        document.getElementById("errorEmailMobile").style.display = "none";
+        sendEmail(direccionCorreo, "thankYouMobile"); 
     });
 
 
 
-    const sendFormInput4 = document.getElementById("sendFormInput4");
-
-
-
-    sendFormInput4.addEventListener("click", function () {
-        const direccionCorreo = document.getElementById("emailInput6").value;
+    document.getElementById("sendDesktopInput").addEventListener("click", function () {
+        const direccionCorreo = document.getElementById("desktopPopupInput").value;
         if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
-            document.getElementById("emailError5").style.display = "block";
+            document.getElementById("errorEmailDesktop").style.display = "block";
             return;
         }
-        document.getElementById("emailError5").style.display = "none";
-        sendEmail(direccionCorreo, "thankyou3");
+        document.getElementById("errorEmailDesktop").style.display = "none";
+        sendEmail(direccionCorreo, "thankYouDesktop"); 
     });
 
+ 
+    
 
 
 
 
     function abrirPopup() {
-        var modal = document.getElementById("emailPopup");
-        var modalMobile = document.getElementById("containerEmailMobilePopup");
+        var modal = document.getElementById("miPopup");
+        var modalMobile = document.getElementById("popupNewsletterEmail");
         modal.style.display = "block";
         modalMobile.style.display = "block";
 
@@ -297,26 +282,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    var closeModalMobile = document.getElementById("closeModalMobile");
+    var closeModalMobile = document.getElementById("cerrarPopupMobile");
     closeModalMobile.addEventListener("click", function () {
-        var modalMobile = document.getElementById("containerEmailMobilePopup");
+        var modalMobile = document.getElementById("popupNewsletterEmail");
         modalMobile.style.display = "none";
     })
 
 
 
-    var closeModalBtn = document.getElementById("closeModal");
+    var closeModalBtn = document.getElementById("cerrarPopup");
 
     closeModalBtn.addEventListener("click", function () {
-        var modal = document.getElementById("emailPopup");
+        var modal = document.getElementById("miPopup");
         modal.style.display = "none";
     })
 
-    window.addEventListener('click', function (e) {
-        if (!document.getElementById('containerEmailNewsletter').contains(e.target)) {
-
-        }
-    });
+    
 
 
 });
@@ -345,18 +326,14 @@ function sendEmail(email, idThankyou) {
                 if (!response.ok) {
                     throw new Error('No se pudo enviar el correo electrónico');
                 }
-                var modal = document.getElementById("emailPopup");
-                modal.style.display = "none";
+              
                 return response.json();
             })
             .then(data => {
                 console.log('Correo electrónico enviado correctamente:', data);
-                var modal = document.getElementById("emailPopup");
-                modal.style.display = "none";
+               
             })
-            .catch(error => {
-                var modal = document.getElementById("emailPopup");
-                modal.style.display = "none";
+            .catch(error => { 
                 console.error('Error al enviar el correo electrónico:', error);
             });
     }

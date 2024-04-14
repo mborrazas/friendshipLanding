@@ -1079,16 +1079,20 @@ footer {
         display: none;
     }
 
-    #closeModalMobile {
-        background: transparent;
-        border: 0;
-        font-size: 29px;
-        position: absolute;
-        top: 10%;
-        right: 15%;
-        z-index: 99999999;
-    }
+
 }
+
+
+#closeModalMobile {
+    background: transparent;
+    border: 0;
+    font-size: 29px;
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    z-index: 99999999;
+}
+
 
 /* Estilos generales para tabletas */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
@@ -1168,13 +1172,40 @@ footer {
 
 
 
-@media(min-width: 450px) and (max-width: 650px) {
-    #emailPopup {
+#popupNewsletterEmail, #miPopup{
+    display: none;
+}
+
+
+
+@media(max-width: 650px) {
+    #miPopup {
+        display: none !important;
+    }
+    #desktopNewsletter{
+        display: none;
+    }
+    #mobileNewsletter{
+        display: block ;
+    }
+}
+
+
+@media(min-width: 650px){
+    #desktopNewsletter{
+        display: block;
+    }
+    #mobileNewsletter{
+        display: none;
+    }
+    #popupNewsletterEmail{
         display: none !important;
     }
 }
 
+
 @media(min-width: 640px) and (max-width: 1024px) {
+
     #shareYour {
         font-size: 5rem;
         width: 100%;
@@ -1484,14 +1515,15 @@ footer {
         margin-top: 4%;
     }
 
-    #email #containerInputEmail{
+    #email #containerInputEmail {
         margin-top: calc(100vh - 952px);
     }
-    #closeModal{
+
+    #closeModal {
         margin-right: 41%;
     }
 
-    #email #containerInputEmail{
+    #email #containerInputEmail {
         margin-top: 14%;
     }
 }
@@ -1507,4 +1539,467 @@ footer {
 
 #real-experience {
     height: fit-content;
+}
+
+
+@media(max-width: 450px) {
+    #imageContainerEmail {
+        display: none;
+    }
+
+    #emailMobile #containerEmailNewsletter,
+    #emailMobilePopup #containerEmailNewsletter {
+
+        padding-top: 32px;
+    }
+
+    #emailMobile,
+    #emailMobilePopup {
+        margin-top: 37px;
+    }
+}
+
+
+#popupNewsletterEmail { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    z-index: 9999999999999;
+ }
+
+#popupNewsletterEmail #popup-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 0;
+    border-radius: 5px;
+    max-width: 316px;
+    max-height: 86%;
+    text-align: center;
+    padding-top: 89px;
+    padding-bottom: 63px;
+    min-width: 280px;
+    border-radius: 40px;
+}
+
+
+
+#popupNewsletterEmail .cerrar {
+    position: absolute;
+    top: -14rem;
+    right: 13px;
+    z-index: 999;
+    color: white;
+    font-size: 44px;
+    cursor: pointer;
+}
+
+#popupNewsletterEmail #popup-contenido img {
+    width: 112%;
+    position: absolute;
+    top: -18rem;
+    left: -14px;
+    right: 0;
+    margin: auto;
+    height: 23rem;
+}
+
+#popupNewsletterEmail .popup-texto {
+    margin-top: 20px;
+    /* Espacio entre la imagen y el texto */
+}
+
+#popupNewsletterEmail .popup-texto h3 {
+    font-size: 32px;
+}
+
+#popupNewsletterEmail .popup-texto p {
+    font-size: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    margin-top: 10px;
+}
+
+#popupNewsletterEmail #mobilePopupInput {
+    margin: 0 auto;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 17px;
+    height: 39px;
+    width: 84%;
+    display: block;
+    padding-left: 22px;
+}
+
+#popupNewsletterEmail #sendMobilePopupInput {
+    display: block;
+    margin: 0 auto;
+    margin-top: 19px;
+    color: black;
+    background: #ffcc02;
+    border: 0;
+    border-radius: 7px;
+    height: 48px;
+    padding: 10px 25px 10px 25px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#popupNewsletterEmail #errorEmailPopupMobile {
+    margin-top: 14px;
+    display: none;
+    font-size: 12px;
+    color: #a40000;
+}
+
+
+
+
+#miPopup.popup { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
+    z-index: 9999;
+    /* Asegura que el popup esté por encima del resto del contenido */
+}
+
+/* Estilos para el contenido del popup */
+#miPopup .popup-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 32px;
+    max-width: 80%;
+    max-height: 80%;
+    height: 18rem;
+    min-width: 700px;
+}
+
+/* Estilos para el contenedor del contenido */
+#miPopup .contenido-wrapper {
+    display: flex;
+    flex-direction: row;
+    /* Alinea los elementos horizontalmente */
+    align-items: center;
+    /* Centra los elementos verticalmente */
+
+    padding-left: 41%;
+    
+
+}
+
+/* Estilos para la imagen */
+#miPopup .imagen {
+    width: 57.3%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right: 20px;
+    position: absolute;
+    left: -71px;
+    top: -52px;
+    max-width: 400px;
+    height: 382px;
+}
+
+/* Estilos para el texto */
+#miPopup .texto {
+    flex-grow: 1;
+    /* Permite que el texto ocupe el espacio restante */
+}
+
+/* Estilos para el botón de cerrar */
+#miPopup .cerrar {
+    position: absolute;
+    top: -2px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 37px;
+}
+
+
+#miPopup #desktopPopupInput {
+    margin: 0 auto;
+    margin-top: 26px;
+    border: 0;
+    height: 41.9px;
+    display: block;
+    padding-left: 22px;
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+    width: 58%;
+    margin-left: 0;
+    display: inline-block;
+    margin-right: 9px;
+
+}
+
+#miPopup #sendDesktopPopupInput {
+    display: block;
+    margin: 0 auto;
+    margin-top: 21px;
+    color: black;
+    background: #ffcc02;
+    border: 0;
+    border-radius: 7px;
+    height: 44px;
+    padding: 10px 25px 10px 25px;
+    font-weight: 600;
+    font-size: 17px;
+    display: inline-block;
+    
+}
+
+
+#miPopup p{
+    font-size: 16px;
+    padding-right: 38px;
+}
+
+#miPopup h3{
+    font-size: 39px;
+}
+
+#miPopup #errorEmailDesktopMobile {
+    margin-top: 9px;
+    display: none;
+    font-size: 12px;
+    color: #a40000;
+}
+
+
+
+
+
+
+
+#desktopNewsletter.popup {  
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    height: 34vh;
+    margin-top: 30%;
+}
+
+/* Estilos para el contenido del popup */
+#desktopNewsletter .popup-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     padding: 20px;
+    border-radius: 32px;
+    max-width: 80%;
+    max-height: 80%;
+    height: 18rem;
+    min-width: 700px;
+    background: #f9f9f9;
+}
+
+/* Estilos para el contenedor del contenido */
+#desktopNewsletter .contenido-wrapper {
+    display: flex;
+    flex-direction: row;
+    /* Alinea los elementos horizontalmente */
+    align-items: center;
+    /* Centra los elementos verticalmente */
+
+    padding-left: 41%;
+    
+
+}
+
+/* Estilos para la imagen */
+#desktopNewsletter .imagen {
+    width: 57.3%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right: 20px;
+    position: absolute;
+    left: -71px;
+    top: -52px;
+    max-width: 400px;
+    height: 382px;
+}
+
+/* Estilos para el texto */
+#desktopNewsletter .texto {
+    flex-grow: 1;
+    /* Permite que el texto ocupe el espacio restante */
+}
+
+/* Estilos para el botón de cerrar */
+#desktopNewsletter .cerrar {
+    position: absolute;
+    top: -2px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 37px;
+}
+
+
+#desktopNewsletter #desktopPopupInput {
+    margin: 0 auto;
+    margin-top: 26px;
+    border: 0;
+    height: 41.9px;
+    display: block;
+    padding-left: 22px;
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+    width: 58%;
+    margin-left: 0;
+    display: inline-block;
+    margin-right: 9px;
+
+}
+
+#desktopNewsletter #sendDesktopInput {
+    display: block;
+    margin: 0 auto;
+    margin-top: 21px;
+    color: black;
+    background: #ffcc02;
+    border: 0;
+    border-radius: 7px;
+    height: 44px;
+    padding: 10px 25px 10px 25px;
+    font-weight: 600;
+    font-size: 17px;
+    display: inline-block;
+    
+}
+
+
+#desktopNewsletter p{
+    font-size: 16px;
+    padding-right: 38px;
+}
+
+#desktopNewsletter h3{
+    font-size: 39px;
+}
+
+#desktopNewsletter #errorEmailDesktop {
+    margin-top: 9px;
+    display: none;
+    font-size: 12px;
+    color: #a40000;
+}
+
+
+ 
+#mobileNewsletter { 
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    height: 34vh;
+    margin-top: 92%;
+ }
+
+#mobileNewsletter #popup-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 0;
+    border-radius: 5px;
+    max-width: 316px;
+    max-height: 86%;
+    text-align: center;
+    padding-top: 89px;
+    padding-bottom: 63px;
+    min-width: 280px;
+    border-radius: 40px;
+}
+
+
+
+#mobileNewsletter .cerrar {
+    position: absolute;
+    top: -14rem;
+    right: 13px;
+    z-index: 999;
+    color: white;
+    font-size: 44px;
+    cursor: pointer;
+}
+
+#mobileNewsletter #popup-contenido img {
+    width: 112%;
+    position: absolute;
+    top: -18rem;
+    left: -14px;
+    right: 0;
+    margin: auto;
+    height: 23rem;
+}
+
+#mobileNewsletter .popup-texto {
+    margin-top: 20px;
+    /* Espacio entre la imagen y el texto */
+}
+
+#mobileNewsletter .popup-texto h3 {
+    font-size: 32px;
+}
+
+#mobileNewsletter .popup-texto p {
+    font-size: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    margin-top: 10px;
+}
+
+#mobileNewsletter #mobileInput {
+    margin: 0 auto;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 17px;
+    height: 39px;
+    width: 84%;
+    display: block;
+    padding-left: 22px;
+}
+
+#mobileNewsletter #sendMobileInput {
+    display: block;
+    margin: 0 auto;
+    margin-top: 19px;
+    color: black;
+    background: #ffcc02;
+    border: 0;
+    border-radius: 7px;
+    height: 48px;
+    padding: 10px 25px 10px 25px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#mobileNewsletter #errorEmailMobile {
+    margin-top: 14px;
+    display: none;
+    font-size: 12px;
+    color: #a40000;
+}
+
+#thankYouMobile{
+    display: none;
+}
+
+#thankYouDesktop{
+    display: none;
 }

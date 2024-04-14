@@ -151,108 +151,84 @@
     </section>
 
 
-    <section id="email">
-        <div id="containerEmailNewsletter">
-            <div id="imageContainerEmail">
-                <img id="lampEmail" src="https://landing-friendship.nyc3.cdn.digitaloceanspaces.com/pink.png" />
-                <img id="backgroundImage"
-                    src="https://landing-friendship.nyc3.cdn.digitaloceanspaces.com/background_popup.svg" />
-            </div>
-            <div id="containerTextEmail">
+
+    <div id="popupNewsletterEmail">
+        <div id="popup-contenido">
+            <span class="cerrar" id="cerrarPopupMobile">&times;</span>
+            <img src="./assets/popup_detail_phone_new.webp" alt="Imagen del Popup">
+            <div class="popup-texto">
                 <h3>Get a discount!</h3>
                 <p>The sale will begin on Kickstarter in <span class="days"></span> days, write your email and we will
                     notify you and
                     also give you a
                     discount.</p>
-            </div>
-            <div id="containerInputEmail">
-                <input type="email" placeholder="What is your email?" name="emailInputPopup" id="emailInput4" />
+                <input type="email" placeholder="What is your email?" id="mobilePopupInput" />
+                <span id="errorEmailPopupMobile">Please write a valid email</span>
+                <button id="sendMobilePopupInput">Join now!</button>
 
-                <button id="sendFormInput2">Join now!</button>
-                <span id="thankyou2">Thank you!</span>
-                <span id="emailError2">Please write a valid email</span>
             </div>
         </div>
-    </section>
+    </div>
 
-
-    <section id="emailPopup">
-        <div id="containerEmailNewsletter">
-            <div id="imageContainerEmail">
-                <img id="lampEmail" src="https://landing-friendship.nyc3.cdn.digitaloceanspaces.com/pink.png" />
-                <img id="backgroundImage"
-                    src="https://landing-friendship.nyc3.cdn.digitaloceanspaces.com/background_popup.svg" />
-            </div>
-            <div id="containerTextEmail">
-                <button id="closeModal"><i class="fa-solid fa-xmark"></i></button>
-                <h3>Get a discount!</h3>
-                <p>The sale will begin on Kickstarter in <span class="days"></span> days, write your email and we will
-                    notify you and
-                    also give you a
-                    discount.</p>
-            </div>
-            <div id="containerInputEmail">
-                <input type="email" placeholder="What is your email?" name="emailInput" id="emailInput" />
-                <button id="sendForm">Join now!</button>
-                <span id="emailError4">Please write a valid email</span>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <div id="containerEmailMobilePopup">
-        <section id="emailMobilePopup">
-            <div id="containerEmailNewsletter">
-                <div id="imageContainerEmail">
-                    <img id="lampEmail" src="https://landing-friendship.nyc3.cdn.digitaloceanspaces.com/pink.png" />
-                    <img id="backgroundImage"
-                        src="https://landing-friendship.nyc3.cdn.digitaloceanspaces.com/popup_detail_phone_2.webp" />
-                </div>
-                <div id="containerTextEmail">
-                    <button id="closeModalMobile"><i class="fa-solid fa-xmark"></i></button>
+    <div id="miPopup" class="popup">
+        <div class="popup-contenido">
+            <span class="cerrar" id="cerrarPopup">&times;</span>
+            <div class="contenido-wrapper">
+                <img src="./assets/background_popup_web.webp" alt="Imagen del Popup" class="imagen">
+                <div class="texto">
                     <h3>Get a discount!</h3>
                     <p>The sale will begin on Kickstarter in <span class="days"></span> days, write your email and we
                         will
                         notify you and
                         also give you a
                         discount.</p>
-                </div>
-                <div id="containerInputEmail">
-                    <input type="email" placeholder="What is your email?" name="emailInputPopup" id="emailPopup2" />
-                    <button id="sendFormInput">Join now!</button>
-                    <span id="emailError3">Please write a valid email</span>
+                    <input type="email" placeholder="What is your email?" id="desktopPopupInput" />
+                    <button id="sendDesktopPopupInput">Join now!</button>
+                    <span id="errorEmailDesktopMobile">Please write a valid email</span>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 
+    
+ 
 
-    <section id="emailMobile">
-        <div id="containerEmailNewsletter">
-            <div id="imageContainerEmail">
-                <img id="lampEmail" src="https://landing-friendship.nyc3.cdn.digitaloceanspaces.com/pink.png" />
-                <img id="backgroundImage"
-                    src="https://landing-friendship.nyc3.cdn.digitaloceanspaces.com/popup_detail_phone_2.webp" />
-            </div>
-            <div id="containerTextEmail">
+    <div id="mobileNewsletter">
+        <div id="popup-contenido"> 
+            <img src="./assets/popup_detail_phone_new.webp" alt="Imagen del Popup">
+            <div class="popup-texto">
                 <h3>Get a discount!</h3>
                 <p>The sale will begin on Kickstarter in <span class="days"></span> days, write your email and we will
                     notify you and
                     also give you a
                     discount.</p>
-            </div>
-            <div id="containerInputEmail">
-                <input type="email" placeholder="What is your email?" name="emailInputPopup" id="emailInput6" />
-                <button id="sendFormInput4">Join now!</button>
-                <span id="thankyou3">Thank you!</span>
-                <span id="emailError5">Please write a valid email</span>
+                <input type="email" placeholder="What is your email?" id="mobileInput" />
+                <span id="errorEmailMobile">Please write a valid email</span>
+                <button id="sendMobileInput">Join now!</button>
+                <span id="thankYouMobile">Thank you!</span>
             </div>
         </div>
-    </section>
+    </div> 
 
-
+    <div id="desktopNewsletter" class="popup">
+        <div class="popup-contenido">
+            <div class="contenido-wrapper">
+                <img src="./assets/background_popup_web.webp" alt="Imagen del Popup" class="imagen">
+                <div class="texto">
+                    <h3>Get a discount!</h3>
+                    <p>The sale will begin on Kickstarter in <span class="days"></span> days, write your email and we
+                        will
+                        notify you and
+                        also give you a
+                        discount.</p>
+                    <input type="email" placeholder="What is your email?" id="desktopPopupInput" />
+                    <button id="sendDesktopInput">Join now!</button>
+                    <span id="errorEmailDesktop">Please write a valid email</span>
+                    <span id="thankYouDesktop">Thank you!</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="questionAndAnswers">
         <div class="container">
