@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
  
 
     // Evitar que el clic en el contenido del popup cierre el popup
-    document.getElementsByClassName("popup-contenido").addEventListener("click", function(event) {
+    document.getElementsByClassName("popup-contenido")[0].addEventListener("click", function(event) {
         event.stopPropagation(); // Detiene la propagación del clic al contenedor del popup
     });
     
