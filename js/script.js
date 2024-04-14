@@ -213,7 +213,19 @@ document.addEventListener("DOMContentLoaded", function () {
    
 
 
+    
+    // Cerrar el popup cuando se haga clic en el botón de cerrar
+    document.getElementById("popupNewsletterEmail").addEventListener("click", function() {
+        document.getElementById("popupNewsletterEmail").style.display = "none";
+    });
+
  
+
+    // Evitar que el clic en el contenido del popup cierre el popup
+    document.getElementById("popup-contenido").addEventListener("click", function(event) {
+        event.stopPropagation(); // Detiene la propagación del clic al contenedor del popup
+    });
+    
     
 
     document.getElementById("sendMobilePopupInput").addEventListener("click", function () {
