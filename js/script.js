@@ -210,37 +210,37 @@ for (i = 0; i < acc.length; i++) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-   
 
 
-    
-    // Cerrar el popup cuando se haga clic en el botón de cerrar
-    document.getElementById("popupNewsletterEmail").addEventListener("click", function() {
-        document.getElementById("popupNewsletterEmail").style.display = "none";
-    });
-
- 
-
-    // Evitar que el clic en el contenido del popup cierre el popup
-    document.getElementById("popup-contenido").addEventListener("click", function(event) {
-        event.stopPropagation(); // Detiene la propagación del clic al contenedor del popup
-    });
-    
 
 
     // Cerrar el popup cuando se haga clic en el botón de cerrar
-    document.getElementById("miPopup").addEventListener("click", function() {
+    document.getElementById("popupNewsletterEmail").addEventListener("click", function () {
         document.getElementById("popupNewsletterEmail").style.display = "none";
     });
 
- 
+
 
     // Evitar que el clic en el contenido del popup cierre el popup
-    document.getElementsByClassName("popup-contenido")[0].addEventListener("click", function(event) {
+    document.getElementById("popup-contenido").addEventListener("click", function (event) {
         event.stopPropagation(); // Detiene la propagación del clic al contenedor del popup
     });
-    
-    
+
+
+
+    // Cerrar el popup cuando se haga clic en el botón de cerrar
+    document.getElementById("miPopup").addEventListener("click", function () {
+        document.getElementById("popupNewsletterEmail").style.display = "none";
+    });
+
+
+
+    // Evitar que el clic en el contenido del popup cierre el popup
+    document.getElementsByClassName("popup-contenido")[0].addEventListener("click", function (event) {
+        event.stopPropagation(); // Detiene la propagación del clic al contenedor del popup
+    });
+
+
 
     document.getElementById("sendMobilePopupInput").addEventListener("click", function () {
         const direccionCorreo = document.getElementById("mobilePopupInput").value;
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         document.getElementById("errorEmailPopupMobile").style.display = "none";
         sendEmail(direccionCorreo);
-        document.getElementById("popupNewsletterEmail").style.display = "none"; 
+        document.getElementById("popupNewsletterEmail").style.display = "none";
     });
 
 
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         document.getElementById("errorEmailDesktopMobile").style.display = "none";
         sendEmail(direccionCorreo);
-        document.getElementById("miPopup").style.display = "none"; 
+        document.getElementById("miPopup").style.display = "none";
     });
 
 
@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
         document.getElementById("errorEmailMobile").style.display = "none";
-        sendEmail(direccionCorreo, "thankYouMobile"); 
+        sendEmail(direccionCorreo, "thankYouMobile");
     });
 
 
@@ -286,25 +286,42 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
         document.getElementById("errorEmailDesktop").style.display = "none";
-        sendEmail(direccionCorreo, "thankYouDesktop"); 
+        sendEmail(direccionCorreo, "thankYouDesktop");
     });
 
- 
-    
 
 
+
+
+    function closePopup() {
+        document.body.style.position = "";
+        document.body.style.top = "";
+        window.scrollTo(0, scrollPosition);
+    }
 
 
     function abrirPopup() {
-        var modal = document.getElementById("miPopup");
-        var modalMobile = document.getElementById("popupNewsletterEmail");
+        var modal = document.getElementById("rewardDiscountPopupDesktop");
+        var modalMobile = document.getElementById("rewardDiscountPopupMobile");
         modal.style.display = "block";
         modalMobile.style.display = "block";
+        document.body.style.overflow = "hidden";
+        var scrollPosition = 0;
+
+        scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Bloquear el scroll
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollPosition}px`;
+
+
 
     }
+
     if (!localStorage.getItem('popup_mostrado')) {
         setTimeout(abrirPopup, 4000);
     }
+
 
 
 
@@ -321,9 +338,124 @@ document.addEventListener("DOMContentLoaded", function () {
     closeModalBtn.addEventListener("click", function () {
         var modal = document.getElementById("miPopup");
         modal.style.display = "none";
+        closePopup();
     })
 
-    
+
+
+    var closeModalMobileNew = document.getElementById("closeModalMobileNew");
+
+    closeModalMobileNew.addEventListener("click", function () {
+        var modal = document.getElementById("rewardDiscountPopupMobile");
+        modal.style.display = "none";
+    })
+
+
+    var poupMobileTrashDiscount = document.getElementById("poupMobileTrashDiscount");
+
+    poupMobileTrashDiscount.addEventListener("click", function () {
+        var modal = document.getElementById("rewardDiscountPopupMobile");
+        modal.style.display = "none";
+        closePopup();
+    })
+
+
+    var popupMobileGetDiscountButton = document.getElementById("popupMobileGetDiscountButton");
+
+    popupMobileGetDiscountButton.addEventListener("click", function () {
+        var callToActionPopupMobile = document.getElementById("callToActionPopupMobile");
+        callToActionPopupMobile.style.display = "none";
+
+        var inputPopupMobile = document.getElementById("inputPopupMobile");
+        inputPopupMobile.style.display = "block";
+    })
+
+    var sendEmailEvent = document.getElementById("sendEmail");
+    sendEmailEvent.addEventListener("click", function () {
+
+
+        const direccionCorreo = document.getElementById("emailMobileInput").value;
+        if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
+            document.getElementById("errorEmail").style.display = "block";
+            return;
+        }
+        sendEmail(direccionCorreo);
+
+        var inputPopupMobile = document.getElementById("inputPopupMobile");
+        inputPopupMobile.style.display = "none";
+
+        var backToSitePopupMobile = document.getElementById("backToSitePopupMobile");
+        backToSitePopupMobile.style.display = "block";
+    })
+
+
+
+
+
+    var backToSite = document.getElementById("backToSite");
+    backToSite.addEventListener("click", function () {
+        var modal = document.getElementById("rewardDiscountPopupMobile");
+        modal.style.display = "none";
+        closePopup();
+    });
+
+
+    var poupDesktopTrashDiscount = document.getElementById("poupDesktopTrashDiscount");
+    poupDesktopTrashDiscount.addEventListener("click", function () {
+        var rewardDiscountPopupDesktop = document.getElementById("rewardDiscountPopupDesktop");
+        rewardDiscountPopupDesktop.style.display = "none";
+        closePopup();
+    })
+
+
+    var closeModalDesktopNew = document.getElementById("closeModalDesktopNew");
+    closeModalDesktopNew.addEventListener("click", function () {
+        var rewardDiscountPopupDesktop = document.getElementById("rewardDiscountPopupDesktop");
+        rewardDiscountPopupDesktop.style.display = "none";
+        closePopup();
+    })
+
+
+
+    var popupDesktopGetDiscountButton = document.getElementById("popupDesktopGetDiscountButton");
+    popupDesktopGetDiscountButton.addEventListener("click", function () {
+        var callToActionPopupDesktop = document.getElementById("callToActionPopupDesktop");
+        callToActionPopupDesktop.style.display = "none";
+
+        var inputPopupDesktop = document.getElementById("inputPopupDesktop");
+        inputPopupDesktop.style.display = "block";
+    })
+
+
+
+    var sendEmailDesktop = document.getElementById("sendEmailDesktop");
+    sendEmailDesktop.addEventListener("click", function () {
+
+
+        const direccionCorreo = document.getElementById("emailMobileDesktop").value;
+        if (!direccionCorreo || !/^\S+@\S+\.\S+$/.test(direccionCorreo)) {
+            document.getElementById("errorEmailDesktop").style.display = "block";
+            return;
+        }
+        sendEmail(direccionCorreo);
+
+        var inputPopupDesktop = document.getElementById("inputPopupDesktop");
+        inputPopupDesktop.style.display = "none";
+
+        var backToSitePopupDesktop = document.getElementById("backToSitePopupDesktop");
+        backToSitePopupDesktop.style.display = "block";
+    })
+
+
+    var backToSiteDesktop = document.getElementById("backToSiteDesktop");
+    backToSiteDesktop.addEventListener("click", function () {
+        var rewardDiscountPopupDesktop = document.getElementById("rewardDiscountPopupDesktop");
+        rewardDiscountPopupDesktop.style.display = "none";
+        closePopup();
+    })
+
+
+
 
 
 });
@@ -352,14 +484,14 @@ function sendEmail(email, idThankyou) {
                 if (!response.ok) {
                     throw new Error('No se pudo enviar el correo electrónico');
                 }
-              
+
                 return response.json();
             })
             .then(data => {
                 console.log('Correo electrónico enviado correctamente:', data);
-               
+
             })
-            .catch(error => { 
+            .catch(error => {
                 console.error('Error al enviar el correo electrónico:', error);
             });
     }
