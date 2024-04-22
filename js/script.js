@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modalMobile.style.display = "block";
         document.body.style.overflow = "hidden";
         var scrollPosition = 0;
-
+        window.scrollTo(0, 0);
         scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
         // Bloquear el scroll
